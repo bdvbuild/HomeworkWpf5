@@ -29,19 +29,22 @@
 
         <ToolBarTray Grid.Row="1">
             <ToolBar Margin="1" Padding="5">
-                <ComboBox Margin="1" Padding="5" SelectedIndex="0" Width="200" SelectionChanged="ComboBox_SelectionChanged">
-                    <TextBlock Text="Arial"/>
-                    <TextBlock Text="Times New Roman"/>
-                    <TextBlock Text="Verdana"/>
-                </ComboBox>
-                <ComboBox Margin="1" Padding="5" SelectedIndex="2" Width="50" SelectionChanged="ComboBox_SelectionChanged_1">
-                    <TextBlock Text="12"/>
-                    <TextBlock Text="14"/>
-                    <TextBlock Text="16"/>
-                    <TextBlock Text="18"/>
-                    <TextBlock Text="20"/>
-                    <TextBlock Text="22"/>
-                </ComboBox>
+                <ComboBox Margin="1" 
+                          Padding="5" 
+                          SelectedIndex="0" 
+                          Width="200" 
+                          SelectionChanged="ComboBox_SelectionChanged" 
+                          ItemsSource="{StaticResource fonts}"/>
+
+
+                <ComboBox Margin="1" 
+                          Padding="5" 
+                          SelectedIndex="2" 
+                          Width="50" 
+                          SelectionChanged="ComboBox_SelectionChanged_1"
+                          ItemsSource="{StaticResource sizes}"/>
+
+
             </ToolBar>
             <ToolBar Margin="1" Padding="5">
                 <ToggleButton Height="30" Width="30" Click="Button_Click">
