@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HomeworkWpf5"
         mc:Ignorable="d"
-        Title="Текстовый редактор" Height="450" Width="800">
+        Title="Текстовый редактор" Height="450" Width="Auto">
     <Window.CommandBindings>
         <CommandBinding Command="Open" Executed="MenuItem_Click"/>
         <CommandBinding Command="Save" Executed="MenuItem_Click_1"/>
@@ -63,6 +63,14 @@
                 <StackPanel VerticalAlignment="Center">
                     <RadioButton Content="Черный" IsChecked="True" Checked="RadioButton_Checked"/>
                     <RadioButton Content="Красный" Checked="RadioButton_Checked_1"/>
+                </StackPanel>
+                <Separator/>
+                <StackPanel>
+                <Label Content="Тема:"/>
+                <ComboBox Name="themes" Width="150" Margin="1" Padding="5" SelectedIndex="0" SelectionChanged="themes_SelectionChanged">
+                    <TextBlock Text="Светлая"/>
+                    <TextBlock Text="Темная"/>
+                </ComboBox>
                 </StackPanel>
             </ToolBar>
         </ToolBarTray>
